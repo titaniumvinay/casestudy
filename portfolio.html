@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - TechFlow Consulting</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .navbar {
+        background-color: white !important;
+      }
+
+      .page-header {
+        background: linear-gradient(135deg, #0033cc, #6699ff);
+        color: white;
+        padding: 80px 0;
+        margin-top: 76px;
+      }
+
+      .portfolio-item {
+        border: none;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .portfolio-img {
+        width: 100%;
+        height: auto;
+        border-bottom: 5px solid #0033cc;
+      }
+
+      .portfolio-category {
+        font-size: 0.9rem;
+        color: #0033cc;
+      }
+
+      .portfolio-description {
+        padding: 15px;
+      }
+
+      .filter-buttons {
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      .filter-buttons button {
+        margin: 5px;
+        border-radius: 20px;
+      }
+      .modal-header {
+        background-color: #0033cc;
+        color: white;
+      }
+      .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+      
+      .social-icons a {
+            color: white;
+            margin-right: 15px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #6699ff;
+        }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">TechFlow</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Our Portfolio</h1>
+        <p class="lead">Explore our recent projects and success stories</p>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="filter-buttons">
+          <button class="btn btn-outline-primary" data-filter="all">All</button>
+          <button class="btn btn-outline-primary" data-filter="Web Development">Web Development</button>
+          <button class="btn btn-outline-primary" data-filter="Cloud Solutions">Cloud Solutions</button>
+          <button class="btn btn-outline-primary" data-filter="Cybersecurity">Cybersecurity</button>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card" data-category="Web Development">
+              <img src="img10.png" class="portfolio-img" alt="Project 1" />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">E-commerce Website</h5>
+                <span class="portfolio-category">Web Development</span>
+                <p>
+                  We developed a fully responsive e-commerce platform for a
+                  retail client.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal1"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card" data-category="Cloud Solutions">
+              <img src="img13.png" class="portfolio-img" alt="Project 2" />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">Cloud Migration</h5>
+                <span class="portfolio-category">Cloud Solutions</span>
+                <p>
+                  Successfully migrated client infrastructure to AWS with 99.9%
+                  uptime.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal2"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio-item card" data-category="Cybersecurity">
+              <img src="img12.png" class="portfolio-img" alt="Project 3" />
+              <div class="portfolio-description">
+                <h5 class="portfolio-title">Security Audits</h5>
+                <span class="portfolio-category">Cybersecurity</span>
+                <p>
+                  Conducted security audits for a financial institution to
+                  prevent data breaches.
+                </p>
+                <button
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#portfolioModal3"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Modal 1 -->
+    <div class="modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="portfolioModal1Label">E-commerce Website</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img15.jpg"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 1"
+            />
+            <p>
+              We developed a robust e-commerce solution that integrated with the
+              client’s inventory system and featured advanced search
+              capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="portfolioModal2Label">Cloud Migration</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img16.jpg"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 2"
+            />
+            <p>
+              Our team successfully migrated the client's infrastructure to the
+              cloud, significantly improving scalability and reducing costs by
+              25%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="portfolioModal3Label">Security Audits</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="img17.png"
+              class="img-fluid d-block mx-auto mb-3"
+              alt="Project 3"
+            />
+            <p>
+              We conducted comprehensive security audits that identified
+              vulnerabilities and recommended measures that enhanced security by
+              40%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row gy-4">
+              <div class="col-lg-4">
+                  <h4 class="mb-4">TechFlow</h4>
+                  <p>Transforming businesses through innovative technical solutions.</p>
+                  <div class="social-icons">
+                      <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
+                      <a href="https://www.x.com"><i class="fab fa-twitter"></i></a>
+                      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-4">
+                  <h5 class="mb-4">Quick Links</h5>
+                  <ul class="list-unstyled">
+                      <li><a href="about.html" class="text-white text-decoration-none">About Us</a></li>
+                      <li><a href="services.html" class="text-white text-decoration-none">Services</a></li>
+                      <li><a href="portfolio.html" class="text-white text-decoration-none">Portfolio</a></li>
+                      <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-4">
+                  <h5 class="mb-4">Newsletter</h5>
+                  <form>
+                      <div class="input-group mb-3">
+                          <input type="email" class="form-control" placeholder="Your email">
+                          <button class="btn btn-primary" type="submit">Subscribe</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          <hr class="mt-4 bg-light">
+          <div class="text-center mt-4">
+              <p>&copy; 2024 TechFlow . All rights reserved.</p>
+          </div>
+      </div>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.querySelectorAll(".filter-buttons button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+          document.querySelectorAll(".portfolio-item").forEach((item) => {
+            if (filter === "all" || item.getAttribute("data-category") === filter) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
